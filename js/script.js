@@ -252,7 +252,7 @@ formInputs.forEach((input) => {
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  //loading
+
   loadingIcon.classList.remove("loading__hidden");
   contactBtn.classList.add("loading__hidden");
 
@@ -264,7 +264,7 @@ form.addEventListener("submit", async (e) => {
   };
 
   if (checkName && checkEmail && checkPhone) {
-    fetch("http://localhost:5000/send-email", {
+    fetch("https://stark-coast-72605.herokuapp.com/send-email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
