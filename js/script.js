@@ -264,7 +264,7 @@ form.addEventListener("submit", async (e) => {
   };
 
   if (checkName && checkEmail && checkPhone) {
-    fetch("https://stark-coast-72605.herokuapp.com/send-email", {
+    fetch("https://stark-coast-72605.herokuapp.com/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -272,9 +272,14 @@ form.addEventListener("submit", async (e) => {
       body: JSON.stringify(emailData),
     })
       .then((res) => {
+        console.log(res.json());
         if (res.status === 200) {
           e.target.reset();
           onToggleItemClasses(modalSuccess, modalWarning, modalError);
+        }
+
+        if (res.status === 404) {
+          onToggleItemClasses(modalError, modalSuccess, modalWarning);
         }
       })
       .catch((err) => {
