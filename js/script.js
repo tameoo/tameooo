@@ -2,9 +2,7 @@ const cursor = document.querySelector(".home__typing .cursor"),
   menu = document.querySelector(".menu__wrapper"),
   closeBtn = document.querySelector(".menu__close"),
   menuBtn = document.querySelector(".header__burger"),
-  overlay = document.querySelector(".menu__overlay"),
-  body = document.querySelector("body");
-
+  overlay = document.querySelector(".menu__overlay");
 let i = 0;
 let index = 0;
 const txt = ["Frontend developer"];
@@ -155,7 +153,6 @@ let service = 0;
 function showService() {
   if (service < serviceItem.length) {
     serviceItem[service].style.display = "block";
-    body.style.cssText = "overflow-x: hidden;";
     service++;
     setTimeout(showService, 200);
   }
