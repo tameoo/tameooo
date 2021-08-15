@@ -706,9 +706,13 @@ h1.glitch::after {
   padding-top: 50px;
 }
 
+.service__upper {
+  height: auto;
+  margin-bottom: 35px;
+}
+
 .service__upper-container {
   margin: 0 auto;
-  margin-bottom: 35px;
   width: 90%;
   display: grid;
   grid-template-rows: 1fr;
@@ -1470,10 +1474,6 @@ svg {
   .service__wrapper {
     height: auto;
     margin-bottom: 30px;
-  }
-
-  .service__upper {
-    height: auto;
   }
 
   .service__upper-inner {
