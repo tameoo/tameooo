@@ -53,12 +53,10 @@ setInterval(cursorOpacity, 500);
 
 menuBtn.addEventListener("click", () => {
   openMenu();
-  body.style.overflow = "hidden";
 });
 
 closeBtn.addEventListener("click", () => {
   closeMenu();
-  body.style.overflow = "visible";
 });
 
 function openMenu() {
@@ -78,7 +76,6 @@ const menuLink = document.querySelectorAll(".menu__link");
 menuLink.forEach((link) => {
   link.addEventListener("click", () => {
     closeMenu();
-    body.style.overflow = "visible";
   });
 });
 
@@ -264,7 +261,7 @@ form.addEventListener("submit", async (e) => {
   };
 
   if (checkName && checkEmail && checkPhone) {
-    fetch("https://stark-coast-72605.herokuapp.com/", {
+    fetch("https://stark-coast-72605.herokuapp.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
