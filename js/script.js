@@ -257,7 +257,7 @@ form.addEventListener("submit", async (e) => {
     message: e.target["message"].value,
   };
   if (checkName && checkEmail && checkPhone) {
-    fetch("http://stark-coast-72605.herokuapp.com", {
+    fetch("https://stark-coast-72605.herokuapp.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
