@@ -256,9 +256,8 @@ form.addEventListener("submit", async (e) => {
     email: e.target["email"].value,
     message: e.target["message"].value,
   };
-
   if (checkName && checkEmail && checkPhone) {
-    fetch("https://stark-coast-72605.herokuapp.com", {
+    fetch("http://stark-coast-72605.herokuapp.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -266,8 +265,10 @@ form.addEventListener("submit", async (e) => {
       body: JSON.stringify(emailData),
     })
       .then((res) => {
-        console.log(res.json());
         if (res.status === 200) {
+          checkEmail = false;
+          checkName = false;
+          checkPhone = false;
           e.target.reset();
           onToggleItemClasses(modalSuccess, modalWarning, modalError);
         }
