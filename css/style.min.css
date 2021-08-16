@@ -604,7 +604,7 @@ h1.glitch::after {
 
 .about__wrapper {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
 }
@@ -807,14 +807,13 @@ h1.glitch::after {
 
 .portfolio__wrapper {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
 }
 
 .portfolio__aside {
   width: 20%;
-  height: 101%;
   background-color: #251170;
   display: flex;
   flex-direction: column;
@@ -908,14 +907,13 @@ svg {
 
 .contact__wrapper {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
 }
 
 .contact__aside {
   width: 20%;
-  height: 100%;
   background-color: #251170;
   display: flex;
   flex-direction: column;
@@ -934,7 +932,6 @@ svg {
 
 .contact__works {
   width: 80%;
-  height: 100%;
 }
 
 .contact__works-wrapper {
@@ -1446,13 +1443,13 @@ svg {
 
   .about__wrapper {
     width: 100%;
-    min-height: 1200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
   .about__block {
+    padding: 60px 0px;
     width: 100%;
     height: 50%;
     display: flex;
